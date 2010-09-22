@@ -63,7 +63,7 @@ your project's classes) are filtered using
 when Proguard generates a single final jar. If you wish to filter other
 resources from a jar file, do the following:
 
-    override makeInJarFilter (file :String) = file match {
+    override def makeInJarFilter (file :String) = file match {
       case "some-special.jar" => super.makeInJarFilter(file) + ",!images/**"
       case _ => super.makeInJarFilter(file)
     }
